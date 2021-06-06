@@ -1,6 +1,6 @@
 # TSP Approximation Algorithms in Python
 
-Here are a some implementations of various approximation algorithms for the optimal Travelling Salesperson Tour in 2D Euclidean Space. Additionally there are some helper algorithms such as Kruskal's MST algorithm which solve related problems.
+Here are a some implementations of various approximation algorithms for the optimal Travelling Salesperson Tour in 2D Euclidean Space. Additionally there are some helper algorithms such as Kruskal's MST algorithm which solve related problems. I developed these as part of my work on a research paper, which I will link when it is done.
 
 Every algorithm takes in as input a list of 2-tuples of floats.
 
