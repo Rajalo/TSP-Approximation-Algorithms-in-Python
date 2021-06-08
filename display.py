@@ -4,6 +4,8 @@ import numpy
 import christofedes
 import nearestNeighbor
 import insertion
+import branchAndBound
+import karpPartition
 
 #Shows the various paths which each algorithm chose to approximate the optimal
 #Works best when mapping one or two algorithms but extensible to any number
@@ -11,6 +13,7 @@ def plotTours(data, *methods):
     plt.figure("Approximation Tours")
     for method in methods:
         order = method(data)
+        order.append(order[0])
         name = methodToString(method)
         plt.plot(*zip(*order), label = name)
     plt.plot(*zip(*data), 'o')
@@ -29,5 +32,6 @@ def methodToString(method):
 def generateRandomPoints(size):
     return [(numpy.random.uniform(0.0,10.0),numpy.random.uniform(0.0,10.0)) for i in range(size)]
 
+
 if __name__ == "__main__":
-    plotTours(generateRandomPoints(50), insertion.runCheapestInsertion)
+    plotTours(generateRandomPoints(20), karpPartition.runKarp)
